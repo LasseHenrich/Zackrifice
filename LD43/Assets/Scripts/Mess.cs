@@ -79,6 +79,12 @@ public class Mess : MonoBehaviour {
                 altarFront.SetTile(new Vector3Int(-1, 0, 0), newAltTiles[2]);
                 altarFront.SetTile(new Vector3Int(0, 0, 0), newAltTiles[3]);
 
+                float radius = 2;
+                float angle = Random.Range(0, 360);
+                Vector2 direction = new Vector2(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad)).normalized;
+                Vector2 pos = direction * radius;
+                p.transform.position = pos;
+
                 isPlaying = true;
             }
             mainMenu.ResetTrigger("In");
