@@ -60,28 +60,31 @@ public class Enemy : MonoBehaviour {
             if (isWalkingPath)
             {
                 //Debug.Log("Walking Path");
-                Vector2 direction = (Vector2)path[targetNode].position - rb2d.position;
-                direction.Normalize();
-                rb2d.velocity = direction * speed;
-                canResetPath = false;
-                if (Vector2.Distance(rb2d.position, path[targetNode].position) < 0.05f)
+                if (targetNode < path.Count)
                 {
-                    //Debug.Log(path[targetNode].position);
-                    rb2d.MovePosition(path[targetNode].position);
-                    //Debug.Log("d");
-                    if (targetNode < path.Count - 1)
+                    Vector2 direction = (Vector2)path[targetNode].position - rb2d.position;
+                    direction.Normalize();
+                    rb2d.velocity = direction * speed;
+                    canResetPath = false;
+                    if (Vector2.Distance(rb2d.position, path[targetNode].position) < 0.05f)
                     {
-                        targetNode++;
                         //Debug.Log(path[targetNode].position);
+                        rb2d.MovePosition(path[targetNode].position);
+                        //Debug.Log("d");
+                        if (targetNode < path.Count - 1)
+                        {
+                            targetNode++;
+                            //Debug.Log(path[targetNode].position);
+                        }
+                        else
+                        {
+                            isWalkingPath = false;
+                            rb2d.velocity = Vector2.zero;
+                            pathDone = true;
+                            //Debug.Log("Path Done");
+                        }
+                        canResetPath = true;
                     }
-                    else
-                    {
-                        isWalkingPath = false;
-                        rb2d.velocity = Vector2.zero;
-                        pathDone = true;
-                        //Debug.Log("Path Done");
-                    }
-                    canResetPath = true;
                 }
             }
             else if (Vector2.Distance(rb2d.position, CurrTargetPos()) < 2 && currDelay <= 0)

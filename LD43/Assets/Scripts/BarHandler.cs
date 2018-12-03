@@ -14,13 +14,19 @@ public class BarHandler : MonoBehaviour {
 	public void Start () {
         img = GetComponent<Image>();
         text = GetComponentInChildren<Text>();
-        currPoints = maxPoints = 100;
+        if (gameObject.name == "HealthBar")
+        {
+            currPoints = maxPoints = 100;
+            Player.instance.health = currPoints;
+        }
+        else
+        {
+            currPoints = maxPoints = 200;
+            Mess.instance.altarHealth = currPoints;
+        }
+        
         img.fillAmount = currPoints;
         text.text = currPoints.ToString();
-        if (gameObject.name == "HealthBar")
-            Player.instance.health = currPoints;
-        else
-            Mess.instance.altarHealth = currPoints;
 
     }
 

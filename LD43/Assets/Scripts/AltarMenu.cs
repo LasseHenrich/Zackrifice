@@ -34,6 +34,8 @@ public class AltarMenu : MonoBehaviour {
         for (int i = 1; i < wepBTexts.Length; i++)
         {
             wepBTexts[i].text = cost[i].ToString();
+            wepBTexts[i].fontSize = 14;
+            bloods[i].SetActive(true);
         }
         wepBTexts[0].text = "EQUIPPED";
         wepBTexts[0].fontSize = 8;
