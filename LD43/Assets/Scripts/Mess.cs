@@ -102,10 +102,11 @@ public class Mess : MonoBehaviour {
         isPlaying = true;
     }
 
-    public void EndGame()
+    public void EndGame(bool througPlayer)
     {
         isPlaying = false;
-        Player.instance.GetComponent<Animator>().SetTrigger("Die");
+        if(througPlayer)
+            Player.instance.GetComponent<Animator>().SetTrigger("Die");
         //Debug.Log("Bye World");
         mainMenu.SetTrigger("In");
         mainMenuHead.text = "GAME OVER";

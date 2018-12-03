@@ -74,7 +74,7 @@ public class TutorialHandler : MonoBehaviour
             case 5: ReTut("Just stand next to it and press Space", "Ok"); break;
             case 6: ReTut("BUT THAT WILL COST YOU SOME OF YOUR HEALTH POINTS.", "HM..."); break;
             case 7: ReTut("COME ON ZACK, SACRIFICES MUST BE MADE!", "DEAL"); break;
-            case 8: ReTut("THANK YOU ZACK! THE ZOMBIES ARE COMING, PROTECT MY ALTAR!", "START"); break;
+            case 8: ReTut("THANK YOU ZACK! I WILL KILL YOU IF THEY DESTROY IT!", "START"); break;
         }
         text.text = "";
         chara = 0;

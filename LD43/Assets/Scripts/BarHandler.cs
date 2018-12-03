@@ -41,12 +41,13 @@ public class BarHandler : MonoBehaviour {
         if (currPoints <= 0)
         {
             if (gameObject.name == "HealthBar")
-                Mess.instance.EndGame();
+                Mess.instance.EndGame(true);
             else
             {
                 Mess.instance.AltarDestroyed();
                 if (AltarMenu.instance.isOpen)
                     AltarMenu.instance.Close();
+                Mess.instance.EndGame(false);
             }
         }
         //Debug.Log(currPoints / maxPoints);
