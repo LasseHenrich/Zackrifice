@@ -27,7 +27,7 @@ public class AltarMenu : MonoBehaviour {
         anim = GetComponent<Animator>();
         isOpen = false;
 
-        cost = new int[] { 0, 120, 150, 200, 250, 10 };
+        cost = new int[] { 0, 120, 160, 250, 300, 10 };
         bought = new bool[] { true, false, false, false, false};
         maxReloadingTime = new float[] { 1, 1.5f, 0.2f, 1.2f, 0.5f };
 
