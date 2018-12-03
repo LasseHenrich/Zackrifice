@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Altar
+  - Enemy
+  - Weapon
+  - Bullet
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Wall
+  - Enemy
+  - SideWall
+  - Player
+  - Bullet
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Default2
+    uniqueID: 1670849759
+    locked: 0
+  - name: Wall
+    uniqueID: 3630867943
+    locked: 0
+  - name: Entity
+    uniqueID: 1242888469
+    locked: 0
+  - name: Front
+    uniqueID: 636705093
+    locked: 0
+  - name: Top
+    uniqueID: 627999019
+    locked: 0
